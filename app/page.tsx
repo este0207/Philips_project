@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex justify-center items-center">
       {/* Home page content */}
-      <ProductCard/>
+      {/* <ProductCard/> */}
     </main>
   );
 }
