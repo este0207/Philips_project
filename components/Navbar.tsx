@@ -12,28 +12,25 @@ export default function Navbar() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="w-420 grid grid-cols-3 items-center py-0 px-8 bg-white/50 shadow-md fixed top-2 left-20 z-50 rounded-xl"
+            className="w-full flex items-center py-4 px-8 bg-transparent justify-between fixed top-10 left-0 z-50"
         >
-            <div className="flex">
-                <Link href="/" className="text-2xl font-bold">
-                    {/* <Image src="/logo.png" alt="Logo" width={40} height={40} /> */}
-                    Philips
-                </Link>
+            <div className="flex bg-white/10 backdrop-blur-md rounded-xl justify-between items-center px-6 py-3 shadow-lg">
+                <div className="flex">
+                    <Link href="/" className="flex text-white text-2xl font-bold">
+                        <Image src="/logoN.png" alt="Logo" width={40} height={40} />
+                        Philips
+                    </Link>
+                </div>
+                <div className="flex justify-center space-x-6 text-xl ">
+                    <ul className="flex gap-5 items-center text-white list-disc pl-5">
+                        <Links href="/" name="Home" />
+                        <Links href="/about" name="About" />
+                        <Links href="/Products" name="Products" />
+                        <Links href="/contact" name="Contact" />
+                    </ul>
+                </div>
             </div>
-            <div className="flex justify-center space-x-6 text-xl bg-black ml-10 p-3 rounded-xl">
-                <ul className="flex gap-5 items-center text-white list-disc pl-5">
-                    <Links href="/" name="Home" />
-                    <Links href="/about" name="About" />
-                    <Links href="/Products" name="Products" />
-                    <Links href="/contact" name="Contact" />
-                </ul>
-            </div>
-            <div className="flex justify-end items-center">
-                <Link href="/cart" className="ml-4 text-xl font-semibold">
-                    {/* Cart */}
-                <Pins icon={<FaShoppingCart />} />
-                </Link>
-            </div>
+            <Pins icon={<FaShoppingCart />} />
         </motion.nav>
     );
 }
