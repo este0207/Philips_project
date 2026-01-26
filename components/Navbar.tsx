@@ -21,9 +21,15 @@ export default function Navbar() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
             className="flex bg-white/10 backdrop-blur-md rounded-full justify-between items-center px-6 py-3 shadow-lg gap-5">
-                <div className="flex">
+                <div className="flex justify-center items-center">
                     <Link href="/" className={`flex ${textColor} text-2xl font-bold`}>
-                        <Image src="/logoN.png" alt="Logo" width={40} height={40} />
+                        <Image
+                            src="/logo.png"
+                            alt="Logo"
+                            width={30}
+                            height={30}
+                            className="mr-2"
+                        />
                         Philips
                     </Link>
                 </div>
@@ -42,7 +48,7 @@ export default function Navbar() {
             transition={{ duration: 0.7 }}
             className={`flex gap-2 ${textColor}`}>
                 <Link href="/cart">
-                    <Pins icon={<FaShoppingCart />} text="CART" />
+                    <Pins icon={<FaShoppingCart />} text="" />
                 </Link>
                     <Pins icon={<MdLanguage />} text="" />
             </motion.div>
