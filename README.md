@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Philips Domotique - Boutique en ligne
 
-## Getting Started
+Bienvenue sur **Philips Domotique**, votre boutique en ligne dédiée aux objets connectés et solutions domotiques Philips !
 
-First, run the development server:
+## Présentation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Philips Domotique propose une large gamme de produits tech pour la maison connectée : ampoules intelligentes, capteurs, prises connectées, systèmes de sécurité, et bien plus encore. Notre objectif est de rendre la domotique accessible à tous, pour une maison plus confortable, économe et sécurisée.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Fonctionnalités principales
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Catalogue de produits Philips connectés
+- Fiches détaillées pour chaque produit
+- Ajout au panier et gestion des achats
+- Interface moderne et responsive
+- Authentification sécurisée (à venir)
+- Paiement en ligne (à venir)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies utilisées
 
-## Learn More
+- [Next.js](https://nextjs.org/) (React, App Router)
+- TypeScript
+- Supabase (backend & base de données)
+- CSS Modules/PostCSS
+- Framer / Framer-Motion
 
-To learn more about Next.js, take a look at the following resources:
+## Installation et lancement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Cloner le projet**
+	```bash
+	git clone https://github.com/este0207/Philips_project.git
+	cd philis_project
+	```
+2. **Installer les dépendances**
+	```bash
+	npm install
+	# ou
+	yarn install
+	```
+3. **Configurer les variables d'environnement**
+	- Créez un fichier `.env.local` à la racine avec vos clés Supabase et autres secrets nécessaires.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Lancer le serveur de développement**
+	```bash
+	npm run dev
+	# ou
+	yarn dev
+	```
+5. Ouvrez [http://localhost:3000](http://localhost:3000) pour voir la boutique.
 
-## Deploy on Vercel
+## Structure du projet
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app/` : Pages principales et routes Next.js
+- `components/` : Composants réutilisables (Header, Navbar, ProductCard...)
+- `lib/` : Fonctions utilitaires (API Supabase, gestion des produits)
+- `public/` : Images et ressources statiques
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request pour proposer des améliorations ou signaler un bug.
+
+## Licence
+
+Projet open-source sous licence MIT.
+
+---
+
+*Philips Domotique n'est pas affilié officiellement à la marque Philips. Ce projet est réalisé à des fins d'apprentissage et de démonstration.*
