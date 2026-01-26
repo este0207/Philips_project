@@ -12,7 +12,7 @@ export default async function ProductsPage() {
     console.error('Supabase fetch error:', err);
   }
   return (
-    <main className="p-8">
+    <main className="p-8 bg-white/90 absolute top-0 left-0 w-full">
       <h1 className="text-2xl font-bold mb-4">Products</h1>
       <div className="">
         {error && (

@@ -4,7 +4,7 @@ export default function Links( { href, name }: { href: string; name: string } ) 
   return (
     <Link
       href={href}
-      className="hover:text-white/50 transition transform duration-300"
+      className="hover:text-black/50 transition transform duration-300"
       style={{ fontFamily: "'Madimi One', sans-serif" }}
     >
       {name}

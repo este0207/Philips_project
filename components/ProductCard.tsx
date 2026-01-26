@@ -18,7 +18,7 @@ export default function ProductCard({ id, name, price, image, desc }: ProductCar
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.3 }}
-        className="bg-white/90 dark:bg-neutral-900 shadow-lg rounded-2xl p-6 flex flex-col items-center gap-4 border border-neutral-200 dark:border-neutral-800 hover:scale-[1.03] transition-transform duration-200 min-w-[260px] max-w-xs"
+        className="bg-white/90 dark:bg-neutral-900 shadow-lg rounded-2xl p-6 flex flex-col items-center gap-4 border border-neutral-200 dark:border-neutral-800 hover:scale-[1.03] transition-transform duration-200 min-w-120 max-w-xs"
         whileHover={{ scale: 1.04 }}
       >
         <div className="w-full flex flex-col items-center">
