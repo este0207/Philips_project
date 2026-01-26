@@ -15,7 +15,7 @@ export default function Navbar() {
 
     const textColor = isProductPage ? "text-black" : "text-white";
     return (
-        <nav className="w-full flex items-center py-4 px-8 bg-transparent justify-between fixed top-10 left-0 z-50">
+        <nav className="w-full flex items-center py-4 px-8 bg-transparent justify-between fixed top-5 left-0 z-50">
             <motion.div 
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
