@@ -1,4 +1,6 @@
+
 import getProducts from '../../lib/getProducts';
+import ProductCard from '../../components/ProductCard';
 
 export default async function ProductsPage() {
   let products = null;
@@ -12,22 +14,29 @@ export default async function ProductsPage() {
   return (
     <main className="p-8">
       <h1 className="text-2xl font-bold mb-4">Products</h1>
-      {error && (
-        <div className="mb-4 p-2 bg-red-100 text-red-800 border border-red-300 rounded">
-          <strong>Error:</strong> {error}
+      <div className="">
+        {error && (
+          <div className="mb-4 p-2 bg-red-100 text-red-800 border border-red-300 rounded">
+            <strong>Error:</strong> {error}
+          </div>
+        )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6  p-6 w-full rounded-lg">
+          {products && products.length > 0 ? (
+            products.map((product: any) => (
+              <div key={product.id} className="flex flex-col gap-2 items-center p-4 rounded-lg">
+                <ProductCard
+                  name={product.product_name || 'Produit'}
+                  price={product.product_price || 0}
+                  image={product.product_image || '/placeholder.png'}
+                  desc={product.desc}
+                />
+              </div>
+            ))
+          ) : !error ? (
+            <div className="col-span-full text-center text-neutral-500">No products found.</div>
+          ) : null}
         </div>
-      )}
-      <ul>
-        {products && products.length > 0 ? (
-          products.map((product: any) => (
-            <li key={product.id} className="mb-2 p-2 border rounded">
-              <pre>{JSON.stringify(product, null, 2)}</pre>
-            </li>
-          ))
-        ) : !error ? (
-          <li>No products found.</li>
-        ) : null}
-      </ul>
+      </div>
     </main>
   );
 }
