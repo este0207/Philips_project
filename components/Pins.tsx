@@ -1,7 +1,8 @@
-export default function Pins( { icon }: { icon: React.ReactNode } ) {
+export default function Pins( { icon, text }: { icon: React.ReactNode; text: string } ) {
     return (
-        <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 hover:cursor-pointertransition">
+        <button className="bg-black/10  flex justify-center text-xl items-center gap-2 p-3 rounded-full hover:bg-black/50 hover:cursor-pointer transition">
             {icon}
+            {text}
         </button>
     );
 }

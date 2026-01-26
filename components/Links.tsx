@@ -2,6 +2,12 @@ import Link from "next/link";
 
 export default function Links( { href, name }: { href: string; name: string } ) {
   return (
-    <Link href={href} className="hover:scale-105">{name}</Link>
+    <Link
+      href={href}
+      className="hover:text-black/50 transition transform duration-300"
+      style={{ fontFamily: "'Madimi One', sans-serif" }}
+    >
+      {name}
+    </Link>
   );
 }
