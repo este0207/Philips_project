@@ -1,5 +1,4 @@
 
-
 export default function InfoCard({ titre, desc, icon }: { titre: string, desc: string, icon: React.ReactNode }) {
     return (
     <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg max-w-sm mx-auto">
