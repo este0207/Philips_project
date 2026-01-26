@@ -26,6 +26,7 @@ export default async function ProductsPage() {
               products.map((product: any) => (
                 <div key={product.id} className="flex flex-col gap-2 items-center p-4 rounded-lg">
                   <ProductCard
+                    id={product.id}
                     name={product.product_name || 'Produit'}
                     price={product.product_price || 0}
                     image={product.product_image || '/placeholder.png'}
