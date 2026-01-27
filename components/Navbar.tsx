@@ -52,7 +52,7 @@ export default function Navbar() {
                 <div className="hidden sm:flex justify-center space-x-10 text-xl">
                     <ul className={`flex gap-10 items-center ${textColor} list-none pl-5`}>
                         <li><Links href="/" name={t("nav.home", lang)} /></li>
-                        <li><Links href="/about" name={t("nav.about", lang)} /></li>
+                        <li className="w-"><Links href="/about" name={t("nav.about", lang)} /></li>
                         <li><Links href="/Products" name={t("nav.products", lang)} /></li>
                         <li><Links href="/contact" name={t("nav.contact", lang)} /></li>
                     </ul>
@@ -82,6 +82,13 @@ export default function Navbar() {
                         <Pins icon={<MdLanguage onClick={() => { toggleLang(); setMenuOpen(false); }} />} text="" href="#" />
                         <Pins icon={<FaUser />} text="" href="/auth" />
                     </div>
+                    <button
+                        className="absolute top-5 right-5 text-3xl text-white focus:outline-none"
+                        onClick={() => setMenuOpen(false)}
+                        aria-label="Close Menu"
+                    >
+                        <FaTimes />
+                    </button>
                 </div>
             )}
         </nav>
