@@ -7,9 +7,12 @@ import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { MdLanguage } from "react-icons/md";
 import { motion } from "framer-motion"
 import { usePathname } from "next/navigation";
+import { t } from "../lib/language";
+import { useLanguage } from "../lib/LanguageContext";
 
 export default function Navbar() {
     const pathname = usePathname();
+    const { lang, toggleLang } = useLanguage();
 
     const isProductPage = pathname?.toLowerCase().includes("/products") || pathname?.toLowerCase().includes("/terms") || pathname?.toLowerCase().includes("/privacy");
 
@@ -35,10 +38,10 @@ export default function Navbar() {
                 </div>
                 <div className="flex justify-center space-x-10 text-xl ">
                     <ul className={`flex gap-10 items-center ${textColor} list-none pl-5`}>
-                        <li><Links href="/" name="HOME" /></li>
-                        <li><Links href="/about" name="ABOUT" /></li>
-                        <li><Links href="/Products" name="PRODUCTS" /></li>
-                        <li><Links href="/contact" name="CONTACT" /></li>
+                        <li><Links href="/" name={t("nav.home", lang)} /></li>
+                        <li><Links href="/about" name={t("nav.about", lang)} /></li>
+                        <li><Links href="/Products" name={t("nav.products", lang)} /></li>
+                        <li><Links href="/contact" name={t("nav.contact", lang)} /></li>
                     </ul>
                 </div>
             </motion.div>
@@ -50,7 +53,7 @@ export default function Navbar() {
                 <Link href="/cart">
                     <Pins icon={<FaShoppingCart />} text="" />
                 </Link>
-                    <Pins icon={<MdLanguage />} text="" />
+                    <Pins icon={<MdLanguage onClick={toggleLang} style={{ cursor: "pointer" }} />} text={lang.toUpperCase()} />
                     <Pins icon={<FaUser />} text="" />
             </motion.div>
         </nav>

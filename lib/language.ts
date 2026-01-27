@@ -72,11 +72,13 @@ export const translations = {
 
     // Footer
     footer: {
-        slogan: { 
-            fr: 'Ékh Oron - Réseau du peuple mongol', 
-            en: 'Ékh Oron - Network of the Mongolian people' 
+        privacy: { 
+            fr: 'Politique de confidentialité', 
+            en: 'Privacy Policy' 
         },
-        copyright: { fr: '© 2024 Ékh Oron. Tous droits réservés.', en: '© 2024 Ékh Oron. All rights reserved.' },
+        copyright: { fr: '© 2024 Philips. Tous droits réservés.', en: '© 2024 Philips. All rights reserved.' },
+        terms: { fr: 'Conditions d\'utilisation', en: 'Terms of Service' },
+        contact: { fr: 'Contactez-nous', en: 'Contact Us' },
     },
 } as const;
 
