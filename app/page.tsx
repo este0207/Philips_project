@@ -17,7 +17,7 @@ export default function Home() {
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: true, margin: "-100px" }} 
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex gap-10 my-20">
+      className="flex gap-10 my-20 w-full flex-wrap justify-center items-center">
         <InfoCard 
           icon={<FaHome />}
           titre="Votre avantage à domiciles" 
@@ -40,12 +40,13 @@ export default function Home() {
         />
       </motion.div>
       <motion.div 
-      initial={{ opacity: 0, y: 50 }} 
-      whileInView={{ opacity: 1, y: 0 }} 
-      viewport={{ once: true, margin: "-100px" }} 
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="grid grid-cols-2 bg-black h-200 w-full">
-        <div className="flex flex-col justify-center items-center w-full text-white">
+        initial={{ opacity: 0, y: 50 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true, margin: "-100px" }} 
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex bg-black h-200 w-full justify-center items-center my-20 rounded-2xl sm:flex-row flex-col"
+      >
+        <div className="flex flex-col justify-center items-center w-full text-white px-6 py-8">
           <h2 className="text-2xl font-semibold mb-4 text-center">
             Bénéficiez du soutien de notre écosystème de produits et d'applications connectés
           </h2>
@@ -53,7 +54,7 @@ export default function Home() {
             Téléchargez notre application HomeID et améliorez votre expérience. Rejoignez 1,4 million d'autres utilisateurs satisfaits.
           </p>
           <a
-            href="#"
+            href="https://play.google.com/store/apps/details?id=com.philips.ka.oneka.app&hl=fr&pli=1"
             className="bg-white text-black px-6 py-3 rounded-full font-medium shadow hover:bg-gray-200 transition"
           >
             Télécharger HomeID
@@ -74,7 +75,7 @@ export default function Home() {
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: true, margin: "-100px" }} 
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex justify-center items-center text-center my-10 px-4 w-full">
+      className="flex justify-center items-center text-center my-10 px-4 w-full flex-wrap gap-8">
         <Image
           src="/homepage.webp"
           alt="Banner Image"
