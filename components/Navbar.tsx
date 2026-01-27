@@ -3,7 +3,7 @@ import Links from "./Links";
 import Link from "next/link";
 import Image from "next/image";
 import Pins from "./Pins";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { MdLanguage } from "react-icons/md";
 import { motion } from "framer-motion"
 import { usePathname } from "next/navigation";
@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
     const pathname = usePathname();
 
-    const isProductPage = pathname?.toLowerCase().includes("/products");
+    const isProductPage = pathname?.toLowerCase().includes("/products") || pathname?.toLowerCase().includes("/terms") || pathname?.toLowerCase().includes("/privacy");
 
     const textColor = isProductPage ? "text-black" : "text-white";
     return (
@@ -51,6 +51,7 @@ export default function Navbar() {
                     <Pins icon={<FaShoppingCart />} text="" />
                 </Link>
                     <Pins icon={<MdLanguage />} text="" />
+                    <Pins icon={<FaUser />} text="" />
             </motion.div>
         </nav>
     );
