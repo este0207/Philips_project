@@ -7,8 +7,8 @@ export default function Header() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="w-full flex justify-center items-center h-250 top-0 left-0   text-white">
-            <div className="rounded-full p-10 text-center shadow-lg">
+        className="w-full flex justify-center items-center h-260 top-0 left-0   text-white">
+            <div className="p-10 text-center ">
                 <h1 className="text-6xl font-bold mb-4">Welcome to Philips</h1>
                 <p className="text-2xl">Your one-stop shop for all things electronics</p>
             </div>

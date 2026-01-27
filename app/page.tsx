@@ -1,15 +1,23 @@
 
+"use client";
+
 import InfoCard from "@/components/InfoCard";
 import Image from "next/image";
 import Header from "@/components/Header";
 import { FaHome , FaStar , FaCheckCircle } from "react-icons/fa";
 import { MdLanguage } from "react-icons/md";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center">
       <Header />
-      <div className="flex gap-10 my-20">
+      <motion.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true, margin: "-100px" }} 
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex gap-10 my-20">
         <InfoCard 
           icon={<FaHome />}
           titre="Votre avantage à domiciles" 
@@ -30,8 +38,13 @@ export default function Home() {
           titre="Durable et circulaire" 
           desc="Notre responsabilité est toujours envers les personnes et la planète."
         />
-      </div>
-      <div className="grid grid-cols-2 bg-black h-200 w-full">
+      </motion.div>
+      <motion.div 
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true, margin: "-100px" }} 
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="grid grid-cols-2 bg-black h-200 w-full">
         <div className="flex flex-col justify-center items-center w-full text-white">
           <h2 className="text-2xl font-semibold mb-4 text-center">
             Bénéficiez du soutien de notre écosystème de produits et d'applications connectés
@@ -55,8 +68,13 @@ export default function Home() {
             className="object-cover"
           />
         </div>
-      </div>
-      <div className="flex justify-center items-center text-center my-10 px-4 w-full">
+      </motion.div>
+      <motion.div 
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true, margin: "-100px" }} 
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex justify-center items-center text-center my-10 px-4 w-full">
         <Image
           src="/homepage.webp"
           alt="Banner Image"
@@ -64,11 +82,11 @@ export default function Home() {
           height={600}
           className="object-cover rounded-2xl"
         />
-        <div className="flex flex-col justify-start items-start ml-8 max-w-lg gap-3">
+        <div className="flex flex-col justify-start items-start ml-8 max-w-lg gap-3 text-white">
           <h2 className="font-bold text-2xl text-start">130 ans d'innovation centrée sur les personnes</h2>
-          <p className="text-start">Depuis plus de 130 ans, nous sommes un nom de confiance dans les foyers. Notre histoire commence - et continue - avec des étincelles d'innovation et des expériences à la maison conçues pour rendre la maison moins exigeante et la vie plus gratifiante.</p>
+          <p className="text-start ">Depuis plus de 130 ans, nous sommes un nom de confiance dans les foyers. Notre histoire commence - et continue - avec des étincelles d'innovation et des expériences à la maison conçues pour rendre la maison moins exigeante et la vie plus gratifiante.</p>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }
