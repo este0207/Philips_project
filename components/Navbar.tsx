@@ -50,11 +50,9 @@ export default function Navbar() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
             className={`flex gap-2 ${textColor}`}>
-                <Link href="/cart">
-                    <Pins icon={<FaShoppingCart />} text="" />
-                </Link>
-                    <Pins icon={<MdLanguage onClick={toggleLang} style={{ cursor: "pointer" }} />} text={lang.toUpperCase()} />
-                    <Pins icon={<FaUser />} text="" />
+                    <Pins icon={<FaShoppingCart />} text="" href="/cart" />
+                    <Pins icon={<MdLanguage onClick={toggleLang} />} text="" href="#" />
+                    <Pins icon={<FaUser />} text="" href="/auth" />
             </motion.div>
         </nav>
     );

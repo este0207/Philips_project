@@ -4,8 +4,8 @@
 import InfoCard from "@/components/InfoCard";
 import Image from "next/image";
 import Header from "@/components/Header";
-import { FaHome , FaStar , FaCheckCircle } from "react-icons/fa";
-import { MdLanguage } from "react-icons/md";
+import { FaHome , FaStar , FaCheckCircle , FaTruck , FaHeartbeat} from "react-icons/fa";
+import { MdLanguage , MdOutlinePayment } from "react-icons/md";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -86,6 +86,33 @@ export default function Home() {
           <h2 className="font-bold text-2xl text-start">130 ans d'innovation centrée sur les personnes</h2>
           <p className="text-start ">Depuis plus de 130 ans, nous sommes un nom de confiance dans les foyers. Notre histoire commence - et continue - avec des étincelles d'innovation et des expériences à la maison conçues pour rendre la maison moins exigeante et la vie plus gratifiante.</p>
         </div>
+      </motion.div>
+      <motion.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true, margin: "-100px" }} 
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex gap-10 w-full p-5 bg-to-black from-transparent via-black flex-wrap justify-center items-center my-20">
+        <InfoCard 
+          icon={<FaTruck />}
+          titre="Livraison gratuite" 
+          desc="Livraison gratuite - sans minimum d'achat"
+        />
+        <InfoCard 
+          icon={<FaHeartbeat />}
+          titre="Pour ceux qui font d'une maison un chez soi" 
+          desc="Conception d'appareils électroménagers pour votre maison"
+        />
+        <InfoCard 
+          icon={<MdLanguage />}
+          titre="Émissions compensées" 
+          desc="Nous compensons toutes les émissions CO2 des livraisons de notre boutique Philips."
+        />
+        <InfoCard 
+          icon={<MdOutlinePayment />}
+          titre="Payez plus tard" 
+          desc="Payez jusqu'à 30 jours plus tard avec Klarna"
+        />
       </motion.div>
     </main>
   );
