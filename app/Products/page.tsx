@@ -12,7 +12,7 @@ export default async function ProductsPage() {
     console.error('Supabase fetch error:', err);
   }
   return (
-    <main className="p-8 bg-white/90 absolute top-0 left-0 w-full">
+    <main className="p-8 bg-white/90 top-0 left-0 w-full">
       <div className="pt-25 h-full flex flex-col items-center">
         <h1 className="text-2xl font-bold mb-4">Products</h1>
         <div className="">
@@ -26,6 +26,7 @@ export default async function ProductsPage() {
               products.map((product: any) => (
                 <div key={product.id} className="flex flex-col gap-2 items-center p-4 rounded-lg">
                   <ProductCard
+                    id={product.id}
                     name={product.product_name || 'Produit'}
                     price={product.product_price || 0}
                     image={product.product_image || '/placeholder.png'}
