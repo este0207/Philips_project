@@ -10,7 +10,7 @@ export default function BioContainer() {
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: true, margin: "-100px" }} 
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex justify-center items-center text-center my-10 px-4 w-full flex-wrap gap-8">
+      className="flex justify-center items-center text-center my-10 px-4 w-full flex-wrap gap-8 backdrop-blur-2xl p-10 rounded-2xl ">
         <Image
           src="/homepage.webp"
           alt="Banner Image"

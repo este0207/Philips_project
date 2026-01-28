@@ -1,5 +1,3 @@
-import Pins from "@/components/ui/Pins";
-import { title } from "process";
 
 export type Language =  'fr' | 'en';
 
@@ -96,9 +94,6 @@ export const translations = {
     products: {
         addToCart: { fr: 'Ajouter au panier', en: 'Add to Cart' },
         viewDetails: { fr: 'Voir les détails', en: 'View Details' },
-        price: { fr: 'Prix', en: 'Price' },
-        available: { fr: 'Disponible', en: 'Available' },
-        outOfStock: { fr: 'Rupture de stock', en: 'Out of Stock' },
     },
 
     // Common
