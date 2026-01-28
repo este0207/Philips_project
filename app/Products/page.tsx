@@ -1,6 +1,6 @@
 
 import getProducts from '../../lib/getProducts';
-import ProductCard from '../../components/ProductCard';
+import ProductCard from '../../components/ui/ProductCard';
 
 export default async function ProductsPage() {
   let products = null;
