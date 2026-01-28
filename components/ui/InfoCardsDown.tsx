@@ -3,8 +3,8 @@ import InfoCard from "@/components/ui/InfoCard";
 import { FaTruck , FaHeartbeat } from "react-icons/fa";
 import { MdLanguage , MdOutlinePayment } from "react-icons/md";
 import { motion } from "framer-motion";
-import { t } from "../lib/language";
-import { useLanguage } from "../lib/LanguageContext";
+import { t } from "../../lib/language";
+import { useLanguage } from "../../lib/LanguageContext";
 
 export default function InfoPins() {
     const { lang } = useLanguage(); 

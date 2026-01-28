@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import {t} from '../../lib/language';
+import { useLanguage } from '../../lib/LanguageContext';
 
 type ProductCardProps = {
   id?: string | number ;
@@ -31,6 +33,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image, desc 
     observer.observe(node);
     return () => observer.disconnect();
   }, []);
+    
+  const { lang } = useLanguage();
 
   return (
     <Link href={`/product/${encodeURIComponent(id ?? '')}`} passHref>
@@ -58,7 +62,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image, desc 
         </div>
         <div className="w-full flex items-center justify-between mt-auto">
           <span className="text-xl font-semibold text-black/90">{typeof price === 'number' ? price.toFixed(2) + ' €' : price}</span>
-          <button className="ml-4 px-4 py-2 bg-black hover:bg-black/70 text-white font-bold rounded-full shadow transition-colors duration-200">Ajouter au panier</button>
+          <button className="ml-4 px-4 py-2 bg-black hover:bg-black/70 text-white font-bold rounded-full shadow transition-colors duration-200">{t("products.addToCart", lang)}</button>
         </div>
       </motion.div>
     </Link>
