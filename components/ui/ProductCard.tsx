@@ -37,7 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image, desc 
   const { lang } = useLanguage();
 
   return (
-    <Link href={`/product/${encodeURIComponent(id ?? '')}`} passHref>
+    <Link href={`/products/${encodeURIComponent(id ?? '')}`} passHref>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 40 }}

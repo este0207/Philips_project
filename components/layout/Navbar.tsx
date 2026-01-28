@@ -52,7 +52,7 @@ export default function Navbar() {
                 <div className="hidden sm:flex justify-center space-x-10 text-xl">
                     <ul className={`flex gap-10 items-center ${textColor} list-none pl-5`}>
                         <li><Links href="/" name={t("nav.home", lang)} /></li>
-                        <li><Links href="/Products" name={t("nav.products", lang)} /></li>
+                        <li><Links href="/products" name={t("nav.products", lang)} /></li>
                         <li className="w-"><Links href="/about" name={t("nav.about", lang)} /></li>
                         <li><Links href="/contact" name={t("nav.contact", lang)} /></li>
                     </ul>
@@ -73,7 +73,7 @@ export default function Navbar() {
                 <div className="fixed inset-0 z-40 flex flex-col items-center justify-start pt-24 bg-black/70 backdrop-blur-md sm:hidden">
                     <ul className="flex flex-col gap-8 items-center text-white text-2xl">
                         <li onClick={() => setMenuOpen(false)}><Links href="/" name={t("nav.home", lang)} /></li>
-                        <li onClick={() => setMenuOpen(false)}><Links href="/Products" name={t("nav.products", lang)} /></li>
+                        <li onClick={() => setMenuOpen(false)}><Links href="/products" name={t("nav.products", lang)} /></li>
                         <li onClick={() => setMenuOpen(false)}><Links href="/about" name={t("nav.about", lang)} /></li>
                         <li onClick={() => setMenuOpen(false)}><Links href="/contact" name={t("nav.contact", lang)} /></li>
                     </ul>
