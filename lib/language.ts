@@ -1,3 +1,6 @@
+import Pins from "@/components/ui/Pins";
+import { title } from "process";
+
 export type Language =  'fr' | 'en';
 
 export const translations = {
@@ -6,7 +9,7 @@ export const translations = {
         home: { fr: 'Accueil', en: 'Home' },
         products: { fr: 'Produits', en: 'Products' },
         contact: { fr: 'Contact', en: 'Contact' },
-        about: { fr: 'À propos', en: 'About' },
+        about: { fr: 'Bio', en: 'About' },
         login: { fr: 'Connexion', en: 'Login' },
         signup: { fr: "S'inscrire", en: 'Sign Up' },
         logout: { fr: 'Déconnexion', en: 'Logout' },
@@ -23,6 +26,46 @@ export const translations = {
             en: 'Your one-stop shop for all things electronics' 
         },
         shopNow: { fr: 'Acheter maintenant', en: 'Shop Now' },
+    },
+
+    Pins1: {
+        title: { fr: 'Votre avantage à domiciles', en: 'Your Home Advantage' },
+        desc: { fr:'Des expériences à la maison moins exigeantes et plus gratifiantes', en:'Making home experiences less demanding and more rewarding' },
+    },
+
+    Pins2: {
+        title: { fr: 'Apporter des innovations qui comptent', en: 'Bringing Innovations That Matter' },
+        desc: { fr:'Nos produits vous aident à bien vivre, à rester en bonne santé et à profiter de la vie à la maison.', en:'Our products help you live well, stay healthy, and enjoy life at home.' },
+    },
+
+    Pins3: {
+        title: { fr: '130 ans d\'excellence', en: '130 Years of Excellence' },
+        desc: { fr:'Nous sommes une marque que vous reconnaissez et en laquelle vous avez confiance avec plus d\'un siècle d\'histoire.', en:'We are a brand you recognize and trust with over a century of history.' },
+    },
+
+    Pins4: {
+        title: { fr: 'Durable et circulaire', en: 'Durable and Circular' },
+        desc: { fr:'Notre responsabilité est toujours envers les personnes et la planète.', en:'Our responsibility is always towards people and the planet.' },
+    },
+
+    Pins5: {
+        title: { fr: 'Livraison gratuite', en: 'Free Delivery' },
+        desc: { fr:'Livraison gratuite - sans minimum d\'achat', en:'Free delivery - no minimum purchase required' },
+    },
+
+    Pins6: {
+        title: { fr: 'Pour ceux qui font d\'une maison un chez soi', en: 'For Those Who Make a House a Home' },
+        desc: { fr:'Conception d\'appareils électroménagers pour votre maison', en:'Designing home appliances for your home' },
+    },
+
+    Pins7: {
+        title: { fr: 'Émissions compensées', en: 'Carbon Neutral' },
+        desc: { fr:'Nous compensons toutes les émissions CO2 des livraisons de notre boutique Philips.', en:'We compensate for all CO2 emissions from deliveries of our Philips store.' },
+    },
+
+    Pins8: {
+        title: { fr: 'Payez plus tard', en: 'Pay Later' },
+        desc: { fr:'Payez jusqu\'à 30 jours plus tard avec Klarna', en:'Pay up to 30 days later with Klarna' },
     },
 
     // Categories
