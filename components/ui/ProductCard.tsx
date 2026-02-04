@@ -61,7 +61,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image, desc 
           {desc && <p className="text-sm text-neutral-600 dark:text-neutral-300 text-center mb-2 line-clamp-2">{desc}</p>}
         </div>
         <div className="w-full flex items-center justify-between mt-auto">
-          <span className="text-xl font-semibold text-black/90">{typeof price === 'number' ? price.toFixed(2) + ' €' : price}</span>
+          <span className="text-xl font-semibold text-black/90 dark:text-white">{typeof price === 'number' ? price.toFixed(2) + ' €' : price}</span>
           <button className="ml-4 px-4 py-2 bg-black hover:bg-black/70 text-white font-bold rounded-full shadow transition-colors duration-200">{t("products.addToCart", lang)}</button>
         </div>
       </motion.div>
