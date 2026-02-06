@@ -1,33 +1,61 @@
 "use client";
+
 import { motion } from "framer-motion";
+import {t} from '../../lib/language';
+import { useLanguage } from '../../lib/LanguageContext';
+import InfoCard from "./InfoCard";
+import { MdFamilyRestroom } from "react-icons/md";
+import { FaUserDoctor } from "react-icons/fa6";
+import DropDownMenu from "./Drop-down-menu";
+
 
 export default function ContactContainer() {
+  const { lang } = useLanguage();
   return (
-    <motion.div
-      className="min-h-screen flex flex-col justify-center items-center bg-transparent backdrop-blur-md p-6"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+    <div
+      className="min-h-screen flex flex-col items-center bg-transparent backdrop-blur-md p-6 pt-30"
     >
-        <h1 className="text-4xl font-bold text-white mb-6">Contact Us</h1>
-        <div className=" p-8 rounded-2xl shadow-lg flex items-center gap-6 bg-white/30">
-            <form className="bg-white/90 dark:bg-neutral-900 shadow-lg rounded-2xl p-6 w-full max-w-md border border-neutral-200 dark:border-neutral-800">
-                <div className="mb-4">
-                <label className="block text-sm font-medium text-neutral-900 dark:text-white mb-2" htmlFor="name">Name</label>
-                <input className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="name" name="name" required />
-                </div>
-                <div className="mb-4">
-                <label className="block text-sm font-medium text-neutral-900 dark:text-white mb-2" htmlFor="email">Email</label>
-                <input className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" id="email" name="email" required />
-                </div>
-                <div className="mb-4">
-                <label className="block text-sm font-medium text-neutral-900 dark:text-white mb-2" htmlFor="message">Message</label>
-                <textarea className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="message" name="message" rows={4} required></textarea>
-                </div>
-                <button className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow transition-colors duration-200" type="submit">Send Message</button>
-            </form>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2352096989!2d2.2264202768160004!3d48.872792499692444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e664dacb29b6e1%3A0x9f5d18fb206943cd!2sPhilips%20France!5e0!3m2!1sfr!2sfr!4v1770135640541!5m2!1sfr!2sfr" width="600" height="450" loading="lazy" className="rounded-xl"></iframe>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white/10 bg-opacity-80 rounded-3xl shadow-lg p-8 max-w-7xl w-full text-center gap-6 flex flex-col items-center"
+      >
+        <h1 className="text-4xl font-bold text-white mb-4">{t('contact.title', lang)}</h1>
+        <div className="flex flex-col gap-10 md:flex-row">
+          <InfoCard
+           titre="Customer Support"
+            desc="Visit your local customer care page for all product-related questions and online shop support."
+            icon={<MdFamilyRestroom className="text-blue-400 text-4xl" />}
+          />
+           <InfoCard
+           titre="Support for healthcare professionals"
+            desc="Find out all about the options available for thecnical support and other forms of assistance."
+            icon={<FaUserDoctor className="text-blue-400 text-4xl" />}
+          />
         </div>
-    </motion.div>
+        <div className="flex flex-col gap-10 w-full  mt-8">
+          <div className="flex flex-col items-start gap-4 w-full w-full">
+            <h2 className="text-white text-2xl font-semibold">Company contacts</h2>
+            <DropDownMenu title="Média Contact" desc="Find all news-related information in the news center.To contact our team on press-related matters – e.g. media contacts, press releases, biographies, pictures and video downloads – see here our media contacts.To download photos and videos, visit our media library."/>
+            <DropDownMenu title="Investor Contacts" desc="Find all investor-related information in our Investor Relations section.To contact our team on investor matters, visit our Investor Relations contacts page."/>
+            <DropDownMenu title="Consumer Support" desc="Visit your local customer care page for all product-related questions and online shop support"/>
+            <DropDownMenu title="Support for healthcare professionals" desc="Find out all about the options available for thecnical support and other forms of assistance."/>
+          </div>
+          <div className="flex flex-col items-start gap-4 w-full w-full">
+            <h2 className="text-white text-2xl font-semibold">Sustainability and Innovation contacts</h2>
+            <DropDownMenu title="Sustainability" desc="If you have any questions about sustainability at Philips, please e-mail us at philips.sustainability@philips.com"/>
+            <DropDownMenu title="Research" desc="If you have any questions about research at Philips, please e-mail us at cto.communications@philips.com"/>
+            <DropDownMenu title="Intellectual Property and Standards" desc="If you have any questions about intellectual property and standards at Philips, please e-mail us at info.ips@philips.com"/>
+            <DropDownMenu title="Philips Engineering Solutions" desc="If you have any questions about Philips Engineering Solutions, please contact us via our website"/>
+          </div>
+          <div className="flex flex-col items-start gap-4 w-full w-full">
+            <h2 className="text-white text-2xl font-semibold">Interested in joining us?</h2>
+            <DropDownMenu title="careers" desc="Visit our Careers site for a list of current job opportunities."/>
+            <DropDownMenu title="Suppliers" desc="Visit our Suppliers site for detailed information and partnering opportunities."/>
+          </div>
+        </div>
+      </motion.div>
+    </div>
   );
 }

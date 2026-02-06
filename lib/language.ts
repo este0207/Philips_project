@@ -66,15 +66,6 @@ export const translations = {
         desc: { fr:'Payez jusqu\'à 30 jours plus tard avec Klarna', en:'Pay up to 30 days later with Klarna' },
     },
 
-    // Categories
-    categories: {
-        title: { fr: 'Catégories de produits', en: 'Product Categories' },
-        meat: { fr: 'Viande & produits carnés', en: 'Meat & Meat Products' },
-        dairy: { fr: 'Produits laitiers', en: 'Dairy Products' },
-        agriculture: { fr: 'Produits agricoles', en: 'Agricultural Products' },
-        crafts: { fr: 'Artisanat mongol', en: 'Mongolian Crafts' },
-    },
-
     // Auth
     auth: {
         email: { fr: 'Email', en: 'Email' },
@@ -96,16 +87,9 @@ export const translations = {
         viewDetails: { fr: 'Voir les détails', en: 'View Details' },
     },
 
-    // Common
-    common: {
-        loading: { fr: 'Chargement...', en: 'Loading...' },
-        error: { fr: 'Erreur', en: 'Error' },
-        success: { fr: 'Succès', en: 'Success' },
-        save: { fr: 'Enregistrer', en: 'Save' },
-        cancel: { fr: 'Annuler', en: 'Cancel' },
-        submit: { fr: 'Soumettre', en: 'Submit' },
-        back: { fr: 'Retour', en: 'Back' },
-        next: { fr: 'Suivant', en: 'Next' },
+    // Contact
+    contact: {
+        title: { fr: 'Comment pouvons-nous vous aider ?', en: 'How can we help you?' },
     },
 
     // Footer
