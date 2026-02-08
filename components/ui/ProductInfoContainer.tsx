@@ -41,7 +41,12 @@ export default function ProductInfoContainer() {
                     <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
                     <p className="text-xl font-semibold mb-2">Prix : {product.price}</p>
                     <p className="text-gray-700">{product.desc}</p>
-                    <AddCartBtn />
+                    <AddCartBtn
+                      id={product.id}
+                      name={product.name}
+                      price={product.price}
+                      image={product.image}
+                    />
                 </div>
             </motion.div>
         </div>

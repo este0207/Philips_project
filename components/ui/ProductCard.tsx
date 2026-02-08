@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {t} from '../../lib/language';
 import { useLanguage } from '../../lib/LanguageContext';
+import { useCart } from '../../lib/CartContext';
 
 type ProductCardProps = {
   id?: string | number ;
@@ -35,6 +36,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image, desc 
   }, []);
     
   const { lang } = useLanguage();
+  const { addItem } = useCart();
+
+  const numericPrice = typeof price === 'number'
+    ? price
+    : parseFloat(String(price).replace(/[^\d.,]/g, '').replace(',', '.')) || 0;
+
+  const itemId = id ?? name;
 
   return (
     <Link href={`/products/${encodeURIComponent(id ?? '')}`} passHref>
@@ -62,7 +70,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image, desc 
         </div>
         <div className="w-full flex items-center justify-between mt-auto">
           <span className="text-xl font-semibold text-black/90 dark:text-white">{typeof price === 'number' ? price.toFixed(2) + ' €' : price}</span>
-          <button className="ml-4 px-4 py-2 bg-black hover:bg-black/70 text-white font-bold rounded-full shadow transition-colors duration-200">{t("products.addToCart", lang)}</button>
+          <button
+            className="ml-4 px-4 py-2 bg-black hover:bg-black/70 text-white font-bold rounded-full shadow transition-colors duration-200"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              addItem({ id: itemId, name, price: numericPrice, image });
+            }}
+          >
+            {t("products.addToCart", lang)}
+          </button>
         </div>
       </motion.div>
     </Link>
