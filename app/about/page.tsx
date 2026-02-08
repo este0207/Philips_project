@@ -4,12 +4,12 @@ import { FaLightbulb, FaHandsHelping, FaLeaf } from "react-icons/fa";
 export default function About() {
     return (
         <main className="flex flex-col items-center min-h-screen bg-transparent py-16 pt-30 px-4">
-            <section className="max-w-3xl text-center mb-12">
+            <section className="max-w-3xl text-center mb-12 bg-white/10 bg-opacity-80 rounded-3xl shadow-lg p-8">
                 <h1 className="text-5xl font-bold text-white mb-4">À propos de Philips</h1>
-                <p className="text-lg text-gray-800 mb-6">
+                <p className="text-lg text-white mb-6">
                     Depuis plus d'un siècle, Philips est synonyme d'innovation, de confiance et de bien-être. Notre mission : améliorer la vie de chacun grâce à des technologies de pointe, accessibles et responsables.
                 </p>
-                <p className="text-base text-gray-700">
+                <p className="text-base text-white">
                     Nous croyons en un avenir où la santé, le confort et la durabilité sont à la portée de tous. Chaque produit Philips est conçu pour inspirer la confiance, simplifier le quotidien et contribuer à un monde meilleur.
                 </p>
             </section>
@@ -30,9 +30,9 @@ export default function About() {
                     icon={<FaLeaf className="text-green-500 text-4xl" />}
                 />
             </section>
-            <section className="max-w-2xl text-center">
+            <section className="max-w-2xl text-center bg-white/10 bg-opacity-80 rounded-3xl shadow-lg p-8">
                 <h2 className="text-2xl font-semibold text-blue-800 mb-2">Philips, une marque de confiance</h2>
-                <p className="text-gray-700">
+                <p className="text-white">
                     Rejoignez des millions de foyers et de professionnels qui font confiance à Philips pour améliorer leur quotidien. Ensemble, construisons un avenir plus sain, plus simple et plus durable.
                 </p>
             </section>

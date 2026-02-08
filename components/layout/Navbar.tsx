@@ -17,7 +17,7 @@ export default function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const isProductPage = pathname?.toLowerCase().includes("/products") || pathname?.toLowerCase().includes("/terms") || pathname?.toLowerCase().includes("/privacy") || pathname?.toLowerCase().includes("/products/[id]");
+    const isProductPage = pathname?.toLowerCase().includes("/products") || pathname?.toLowerCase().includes("/terms") || pathname?.toLowerCase().includes("/privacy") || pathname?.toLowerCase().includes("/products/[id]") || pathname?.toLowerCase().includes("/cart");
 
     const textColor = isProductPage ? "text-black" : "text-white";
     return (
