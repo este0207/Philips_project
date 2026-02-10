@@ -51,7 +51,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image, desc 
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="bg-white/90 dark:bg-neutral-900 shadow-lg rounded-2xl p-6 flex flex-col items-center gap-4 border border-neutral-200 dark:border-neutral-800 hover:scale-[1.03] transition-transform duration-200 min-w-120 max-w-xs"
+        className="bg-white/90 dark:bg-neutral-900 shadow-lg rounded-2xl p-6 flex flex-col items-center gap-4 border border-neutral-200 dark:border-neutral-800 hover:scale-[1.03] transition-transform duration-200 min-w-full max-w-xs"
         whileHover={{ scale: 1.04 }}
       >
         <div className="w-full flex flex-col items-center">
